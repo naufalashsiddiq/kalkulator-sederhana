@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIC Naufal</title>
+
+</head>
+		<body>
+			<h3>Kalkulator Naufal</h3>
+			<input type="number" id="nilai1">
+			<br>
+			<br>
+
+			<input type="number" id="nilai2">
+			<br>
+			<br>
+
+			<input type="number" id="nilai3">
+			<br>
+			<br>
+			
+			<button type="button" id="operator" onclick="operandi('+')">+</button> 
+			<button type="button" id="operator" onclick="operandi('-')">-</button> 
+			<button type="button" id="operator" onclick="operandi('*')">*</button> 
+			<button type="button" id="operator" onclick="operandi('/')">/</button> 	
+			
+			<br>
+			<br>
+
+			<input type="number" id="hasil">
+	
+			<button onclick="hitung()">Hitung</button>
+
+			<script type="text/javascript">
+
+			var nilai1;
+			var nilai2;
+			var nilai3;
+			var operator;
+
+			function operandi(operand) {
+				operator = operand;
+			}
+
+			function hitung(click){
+
+				nilai1 = parseInt(document.getElementById('nilai1').value);
+				nilai2 = parseInt(document.getElementById('nilai2').value);
+				nilai3 = parseInt(document.getElementById('nilai3').value);
+				
+			if (operator == "+")
+				{
+					var hasil = nilai1 + nilai2 + nilai3;
+					var akhirnya = document.getElementById('hasil').value=hasil;
+				}
+			
+			else if (operator == "-")
+				{
+					var hasil = nilai1 - nilai2 - nilai3;
+					var akhirnya = document.getElementById('hasil').value=hasil;
+				}
+
+			else if (operator == "*")
+				{
+					var hasil = nilai1 * nilai2 * nilai3;
+					var akhirnya = document.getElementById('hasil').value=hasil;
+				}
+			
+			else if (operator == "/")
+				{
+					var hasil = nilai1 / nilai2 / nilai3;
+					var akhirnya = document.getElementById('hasil').value=hasil;
+				}
+
+				
+				document.getElementById("hasil").value=hasil;
+			}
+					
+			</script>
+	</body>
+</html>
